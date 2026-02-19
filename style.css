@@ -403,8 +403,8 @@ footer p {
     border-style: solid;
     border-color: #3e4939;
     border-width: 1.5px;
-    width: 18rem;
-    height: 11rem;
+    width: 40rem;
+    height: 12.5rem;
     margin: 1rem 2rem;
     border-radius: 1.8rem;
     font-size: 1.2rem;
@@ -413,7 +413,7 @@ footer p {
 
 .icon {
     display: flex;
-    margin: 2rem auto 0rem;
+    margin: 1.5rem auto 0rem;
 }
 
 .card h3 {
@@ -501,7 +501,7 @@ footer p {
 
 .skills-card img {
     display: flex;
-    margin: 2rem auto 0rem;
+    margin: 1.7rem auto 0rem;
 }
 
 .skills-card h3 {
@@ -514,7 +514,7 @@ footer p {
     font-size: 1.3rem;
     line-height: 1.8rem;
     text-align: justify;
-    padding-left: 2.7rem;
+    padding-left: 2.2rem;
 }
 
 @media (max-width: 768px) {
@@ -622,7 +622,7 @@ footer p {
 .projects-card a {
     background: #425522;
     color: #ffffff;
-    border-radius: 1.8rem;
+    border-radius: 0.7rem;
     padding: 0.7rem 0.8rem;
     margin: 0rem 8.5rem;
     transition: 0.3s;
