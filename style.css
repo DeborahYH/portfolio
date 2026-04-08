@@ -577,19 +577,19 @@ footer p {
 
 /* PROJECTS SECTION */
 
-#projects {
+#projects, #dashboards {
     display: flex;
     flex-direction: column;
     font-family: "Mulish", sans-serif;
 }
 
-.container-projects {
+.container-projects, .container-dashboards {
     display: flex;
     flex-direction: line;
     justify-content: center;
 }
 
-.projects-card {
+.projects-card, .dashboards-card {
     border-style: solid;
     border-color: #3e4939;
     border-width: 1.5px;
@@ -601,7 +601,7 @@ footer p {
     text-align: justify;
 }
 
-.projects-card h3 {
+.projects-card h3, .dashboards-card h3 {
     font-size: 1.5rem;
     text-align: center;
     margin: 0.7rem;
@@ -612,24 +612,25 @@ footer p {
     flex-direction: column;
 }
 
-.projects-card img {
+.projects-card img, .dashboards-card img {
+    display: flex;
     margin: auto;
     border-radius: 1.8rem;
 }
 
-.projects-card p {
+.projects-card p, .dashboards-card p {
     font-size: 1.2rem;
     text-align: justify;
     padding: 0rem 1.5rem;
     margin: 0.5rem auto 2rem;
 }
 
-.project-links {
+.project-links, .dashboards-links {
     width: 100%;
     text-align: center;
 }
 
-.projects-card a {
+.projects-card a, .dashboards-card a {
     background: #425522;
     color: #ffffff;
     border-radius: 1.5rem;

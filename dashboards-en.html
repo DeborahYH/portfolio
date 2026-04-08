@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+
+    <!--Desktop Navbar-->
+    <nav id="desktop-nav">
+        <div class="logo">Deborah Y. H.</div>
+        <div>
+            <ul class="nav-links">
+                <li class="hidden-links"><a href="index.html#about">About</a></li>
+                <li class="hidden-links"><a href="index.html#skills">Skills</a></li>
+                <li class="hidden-links"><a href="index.html#projects">Projects</a></li>
+                <li class="hidden-links"><a href="index.html#contact">Contact</a></li>
+                <li class="hidden-links-lang"><a href="dashboards.html">PT-BR</a></li>
+                <li class="burger-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="nav-side">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 96 960 960" width="35px"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+        
+    <section id="dashboards">
+
+        <h1 class="title">Dashboards</h1>
+
+        <div class="section-text">
+            <p>Dashboards built with Power BI, using data extracted from different sources.</p>
+            <p>Since direct publishing wasn't possible, the following pages include download links for each dashboard.</p>
+        </div>
+
+        <div class="container-dashboards">
+            <div class="dashboards-card">
+                <h3>Beer Consumption</h3>
+                <div class="card-content">
+                    <img src="./assets/beer.jpg">
+                    <p>Analysis of beer consumption in São Paulo (2015), including comparisons related to temperature and precipitation.</p>
+                </div>
+                <div class="dashboards-links">
+                    <a href="#">Visit</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <nav>
+            <div class="nav-footer">
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>By Deborah Y. Hukuda (2026)</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.nav-side').classList.add('open');
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.nav-side').classList.remove('open');
+        }
+    </script>
+
+</body>
+</html>
