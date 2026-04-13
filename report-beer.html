@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+
+    <!--Desktop Navbar-->
+    <nav id="desktop-nav">
+        <div class="logo">Deborah Y. H.</div>
+        <div>
+            <ul class="nav-links">
+                <li class="hidden-links"><a href="index.html#about">Sobre</a></li>
+                <li class="hidden-links"><a href="index.html#skills">Skills</a></li>
+                <li class="hidden-links"><a href="index.html#projects">Projetos</a></li>
+                <li class="hidden-links"><a href="index.html#contact">Contato</a></li>
+                <li class="hidden-links-lang"><a href="construction-en.html">EN-US</a></li>
+                <li class="burger-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            <ul class="nav-side">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 96 960 960" width="35px"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    
+    <section id="about">
+
+        <div class="dashboard-intro">
+            <h1 class="title">Consumo de Cerveja em São Paulo</h1>
+            <a class="dashboard-link" href="assets/dashboards/beer.pbix" download="beer.pbix">Baixar Dashboard</a>
+        </div>
+        
+        <div class="section-text">
+            
+            <p>O setor cervejeiro representa uma parcela importante do PIB (1,6% em 2018)<sup><a href="#references">[1]</a></sup>, com destaque para São Paulo, onde se observa um aumento do número de cervejarias <sup><a href="#references">[2]</a></sup></p>
+            <p>Nesse contexto, o estudo de fatores que influenciam o consumo e o mercado ajuda a entender melhor o comportamento e as preferências do consumidor, o que permite desenvolver estratégias de marketing e vendas mais eficazes.</p>
+            <p>Sendo assim, este projeto teve como objetivo explorar alguns dos possíveis fatores que influenciam o consumo de cerveja na cidade de São Paulo, a partir da criação de um dashboard de Power BI.</p>
+            <p>Estes dashboards foram criados com base 
+                <a class="txt-link" href="https://www.kaggle.com/datasets/dongeorge/beer-consumption-sao-paulo">neste</a> 
+                dataset disponibilizado no Kaggle, contendo dados coletados numa região universitária ao longo de 1 ano em 2015, a partir de estudantes entre 18 e 28 anos de idade. 
+                Além do consumo de cerveja, o dataset contém também dados referentes à temperatura e precipitação.</p>
+            
+            <p>Análises complementares podem ser encontradas 
+                <a class="txt-link" href="https://colab.research.google.com/drive/1Ra1R2qg04lus4UbIvMfkretC0cgQoRZq#scrollTo=XIOgjmOdgHdQ" target="_blank">aqui</a>, 
+                um notebook onde utilizei bibliotecas do Python como Pandas, Matplotlib e Seaborn para explorar estatísticas descritivas, avaliar as distribuições 
+                das variáveis, e realizar algumas análises preliminares dos dados.</p>
+
+            <p>Visto que este projeto tinha apenas como objetivo meu aprendizado particular (com foco na construção de um dashboard de fácil visualização usando o Power BI), as análises apresentadas aqui não serão muito complexas.</p>
+            <p>No entanto, no futuro pretendo desenvolver dashboards mais completos envolvendo análises mais profundas e direcionadas.</p>
+
+            <div class="dashboard-container">
+                <h2>Dashboard 1 - Consumo de Cerveja X Precipitação</h2>
+                <img class="dashboard-img" src="./assets/dashboards/beer_01.png" alt="Dashboard avaliando o consumo de cerveja em relação à precipitação">            
+                <p>O primeiro dashboard organiza os dados referentes à precipitação na cidade de São Paulo e, na parte inferior, compara esta variável ao consumo de cerveja.</p>
+                <p>Ao se observar o gráfico de linhas (comparação da precipitação média com o consumo de cerveja ao longo do ano), as duas variáveis apresentam padrões semelhantes, onde o aumento do consumo está associado à maior precipitação, e vice-versa.</p>
+                <p>No entanto, o scatter plot mostra pontos que não apresentam um padrão muito definido, e o cálculo do coeficiente de Spearman indica apenas uma correlação negativa fraca.</p>
+                <p>Sendo assim, os resultados sugerem que não há uma relação entre as duas variáveis.</p>
+            </div>
+
+            <div class="dashboard-container">
+                <h2>Dashboard 2 - Consumo de Cerveja X Temperatura</h2>
+                <img class="dashboard-img" src="./assets/dashboards/beer_02.png" alt="Dashboard avaliando o consumo de cerveja em relação à temperatura">
+                <p>O segundo dashboard foi criado com base nos dados de temperatura. Para avaliar sua relação com o consumo de cerveja, foram utilizados apenas os dados referentes à temperatura média.</p>
+                <p>Mais uma vez, o gráfico de linhas no canto inferior direito sugere uma possível associação entre as duas variáveis, que apresentam um padrão similar de aumento e queda ao longo do ano.</p>
+                <p>Dessa vez, o scatter plot apresenta um padrão mais definido, onde o aumento da temperatura está moderadamente associado ao aumento do consumo de cerveja.</p>
+            </div>
+
+            <div class="dashboard-container">
+                <h2>Dashboard 3 - Consumo de Cerveja ao Longo da Semana</h2>
+                <img class="dashboard-img" src="./assets/dashboards/beer_03.png" alt="Dashboard de consumo de cerveja ao longo da semana">
+                <p>Por fim, o último dashboard mostra que o consumo de cerveja é maior no sábado e domingo.</p>
+                <p>Embora o dashboard anterior sugira uma associação entre temperatura e consumo, estes gráficos sugerem que - mesmo sem variações na temperatura - o consumo de cerveja tende a ser maior durante os finais de semana.</p>
+            </div>
+
+            <div class="dashboard-container">
+                <h2>Discussão</h2>
+                <div class="discussion-block">
+                    <p class="discussion-title">Limitações</p>
+                    <p>Visto que este projeto não envolveu a realização de análises estatísticas aprofundadas, e seu objetivo era apenas explorar os dados de forma visual, 
+                        não é possível tirar conclusões robustas a partir dos resultados apresentados - eles poderiam servir apenas como guias para explorar novas possibilidades.</p> 
+                    <p>É importante lembrar também que, segundo a fonte do dataset, a coleta de dados foi realizada numa área universitária e com uma amostra de estudantes, 
+                        e por isso não é possível extrapolar quaisquer conclusões para a cidade de São Paulo como um todo.</p>
+                    <p>O tamanho da amostra e o método de coleta de dados também não são conhecidos, sendo impossível discutir a padronização e confiabilidade dos resultados.</p>
+                </div>
+                <div class="discussion-block">
+                    <p class="discussion-title">Considerações Finais</p>
+                    <p>Apesar das limitações, os gráficos apresentados ainda permitem identificar possíveis fatores que influenciam o consumo de cerveja, como temperatura e dia da semana.</p>
+                    <p>Sendo assim, poderia ser interessante realizar análises mais profundas sobre como esta relação se estabelece neste contexto.</p>
+                    <p>Por exemplo, seria interessante avaliar o efeito da temperatura controlado pelas comemorações que ocorrem no início e final do ano, 
+                        períodos de festas em que naturalmente é esperado um maior consumo de álcool.<sup><a href="#references">[3]</a></sup></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <div id="references">
+        <h2>Referências</h2>
+        <ol>
+            <li>MINISTÉRIO DA AGRICULTURA, PECUÁRIA E ABASTECIMENTO. Anuário da Cerveja 2021. Brasília: 2022. Disponível em: <a href="https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/dipov-1/conteudo-da-inspecao-vegetal/anuarios-pov/anuario-da-cerveja-2021.pdf/view" target="_blank">https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/dipov-1/conteudo-da-inspecao-vegetal/anuarios-pov/anuario-da-cerveja-2021.pdf/view</a>. Acesso em 13 abr. 2026.</li>
+            <li>USDA (UNITED STATES DEPARTMENT OF AGRICULTURE - FOREIGN AGRICULTURAL SERVICE). Beer Marketing Report. 2020. Disponível em: <a href="https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Beer+Marketing+Report_Sao+Paulo+ATO_Brazil_12-30-2019" target="_blank">https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Beer+Marketing+Report_Sao+Paulo+ATO_Brazil_12-30-2019</a>. Acesso em 10 abr. 2026.</li>
+            <li>FLANDERS INVESTMENT AND TRADE. Beer Sector in Brazil. São Paulo: 2020. Disponível em: <a href="https://export.flandersinvestmentandtrade.com/sites/fit_domains/files/media/report/Beer%2520study%2520Brazil_2.pdf" target="_blank">https://export.flandersinvestmentandtrade.com/sites/fit_domains/files/media/report/Beer%2520study%2520Brazil_2.pdf</a>. Acesso em 10 abr. 2026.</li>
+        </ol>
+    </div>
+
+    <footer>
+        <nav>
+            <div class="nav-footer">
+                <ul class="nav-links">
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#projects">Projetos</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Desenvolvido por Deborah Y. Hukuda (2026)</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.nav-side').classList.add('open');
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.nav-side').classList.remove('open');
+        }
+    </script>
+
+</body>
+</html>
