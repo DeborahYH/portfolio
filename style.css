@@ -652,7 +652,7 @@ footer p {
 @media (max-width: 768px) {
 
     #projects {
-        height: 125vh;
+        height: auto;
     }
 
     .container-projects {
